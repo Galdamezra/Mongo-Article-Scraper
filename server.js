@@ -49,7 +49,7 @@ app.get("/scrape", function(req, res) {
     // load into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     //grab every h1
-    $("headline h1").each(function(i, element) {
+    $("h1.home-featured-content__headline").each(function(i, element) {
 
       //save an empty result object
       var result = {};
