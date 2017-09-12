@@ -94,7 +94,7 @@ app.get("/articles", function(req, res) {
 });
 
 //grab articles by ObjectId
-app.get("/article/:id", function(req, res) {
+app.get("/articles/:id", function(req, res) {
   //using the id passed in the id parameter
   Article.findOne({ "_id": req.params.id })
   ////populate all of the notes associated with it
